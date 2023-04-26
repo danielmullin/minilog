@@ -59,10 +59,10 @@ $logger = new MiniLog();
 $logger->addConsoleHandler(Logger::DEBUG);
 
 // Add email handler with minimum log level of ERROR
-$logger->addEmailHandler('dev@example.com', Logger::ERROR);
+$logger->addEmailHandler('email@danielmullin.com', Logger::ERROR);
 
 // Add file handler with minimum log level of INFO
-$logger->addFileHandler('/var/log/my_logger.log', Logger::INFO);
+$logger->addFileHandler('/var/log/minilog.log', Logger::INFO);
 
 $logger->debug('Debug message');
 $logger->info('Info message');

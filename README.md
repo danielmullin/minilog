@@ -75,3 +75,14 @@ $logger->error('Error message');
 
 Beyond initial 1 hour development time, it would be good to...
 
+Extrapolate to individual class files and load via Factory pattern or similar to reduce memory footprint.
+
+Dynamic log level adjustment so that ignored logs in one application cycle can be trigged to be logged if a later error occurs during the cycle.
+
+Persist elevated alerts inside the logging layer, so that if an exception has been flagged subsequent log requests would not be filtered by Monologs implementation.
+
+Batch log messages to single payload if it can demonstrate improved efficiency.
+
+Route some or all log requests over a syslog ingestion solution or queue system to reduce impact on the logged application with slow / locked file writes for example, and process the slower resolutions at a later date. 
+
+

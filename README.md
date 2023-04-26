@@ -19,7 +19,7 @@ Add the repository to you composer.json
         /...
 	 {
             "type": "git",
-            "url": "https://github.com/danielmullin/bookwhen"
+            "url": "https://github.com/danielmullin/minilog"
         }
 	.../
     ],

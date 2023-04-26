@@ -4,16 +4,21 @@ declare(strict_types = 1);
 
 /**
  *  A simple logger library built on top of Monolog.
+ *  
+ *  Minilog.php
+ *  
+ *  The Minilog class.
  */
 
 namespace DanielMullin\Minilog;
 
+use DanielMullin\Minilog\Interfaces\MinilogInterface;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\NativeMailerHandler;
 use Monolog\Handler\RotatingFileHandler;
 
-class Minilog
+class Minilog implements MinilogInterface
 {
     private $logger;
 
@@ -55,6 +60,16 @@ class Minilog
         $this->logger->pushHandler(new RotatingFileHandler($path, 0, $level));
     }
 
+    /**
+     *
+     * @param string $path
+     * @param int $level
+     */
+    public function addServerApiHandler(string $path, int $level = Logger::DEBUG): void
+    {
+        // @todo implement
+    }
+    
     /**
      * 
      * @param string $message
